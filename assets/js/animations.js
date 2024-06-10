@@ -234,7 +234,7 @@ function gotoSection(index, direction) {
   let fromTop = direction === -1,
       dFactor = fromTop ? -1 : 1,
       tl = gsap.timeline({
-        defaults: { duration: 1.25, ease: "power1.inOut" },
+        defaults: { duration: 1.25, ease: "expo.inOut" },
         onComplete: () => {
           animating = false;
           startAutoNavigate(); // Restart the timer after animation completes
@@ -298,5 +298,40 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+// Typewriter effect
+const typewriterElement = document.querySelector('.typewriter');
+const words = ['Davio', 'Developer', 'Designer', 'Dreamer'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typewriterTimeout;
+
+function type() {
+  const currentWord = words[wordIndex];
+  const displayText = currentWord.substring(0, charIndex);
+
+  typewriterElement.textContent = displayText;
+
+  if (!isDeleting) {
+    if (charIndex < currentWord.length) {
+      charIndex++;
+      typewriterTimeout = setTimeout(type, 150); // Typing speed
+    } else {
+      isDeleting = true;
+      typewriterTimeout = setTimeout(type, 2000); // Pause before deleting
+    }
+  } else {
+    if (charIndex > 1) {
+      charIndex--;
+      typewriterTimeout = setTimeout(type, 100); // Deleting speed
+    } else {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typewriterTimeout = setTimeout(type, 200); // Pause before typing next word
+    }
+  }
+}
+
 gotoSection(0, 1); // Initial section
 startAutoNavigate(); // Start the auto-navigation timer
+type(); // Start the typewriter effect

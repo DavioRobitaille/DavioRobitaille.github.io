@@ -26,6 +26,19 @@ body {
   font-family: "Cormorant Garamond", serif;
 }
 
+.typewriter {
+    display: inline-block;
+    border-right: 0.1px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-cursor 1s infinite;
+  }
+  
+  @keyframes blink-cursor {
+    from, to { border-color: rgba(255, 255, 255, 0.1); }
+    50% { border-color: rgba(255, 255, 255, 0.6); }
+  }
+
 h2 {
   font-size: 5vw;
   font-weight: 400;
@@ -165,6 +178,22 @@ h2 * {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
 
+            .bg-1 {
+                z-index: 5;
+            }
+            .bg-2 {
+                z-index: 4;
+            }
+            .bg-3 {
+                z-index: 3;
+            }
+            .bg-4 {
+                z-index: 2;
+            }
+            .bg-5 {
+                z-index: 3;
+            }
+
             .bg {
                 width: 20vw;
                 position: relative;
@@ -172,8 +201,8 @@ h2 * {
                 h2 {
                     .st-wrapper {
                         div {
-                            div:nth-child(1) {
-                                font-size: 23vw;
+                            div {
+                                font-size: 40vw;
                                 margin-right: 0;
                             }
                         }

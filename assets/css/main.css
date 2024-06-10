@@ -21,6 +21,22 @@ body {
   font-family: "Cormorant Garamond", serif;
 }
 
+.typewriter {
+  display: inline-block;
+  border-right: 0.1px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-cursor 1s infinite;
+}
+
+@keyframes blink-cursor {
+  from, to {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+}
 h2 {
   font-size: 5vw;
   font-weight: 400;
@@ -119,11 +135,26 @@ h2 * {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
+.sixth .outer .inner .bg-1 {
+  z-index: 5;
+}
+.sixth .outer .inner .bg-2 {
+  z-index: 4;
+}
+.sixth .outer .inner .bg-3 {
+  z-index: 3;
+}
+.sixth .outer .inner .bg-4 {
+  z-index: 2;
+}
+.sixth .outer .inner .bg-5 {
+  z-index: 3;
+}
 .sixth .outer .inner .bg {
   width: 20vw;
   position: relative;
 }
-.sixth .outer .inner .bg h2 .st-wrapper div div:nth-child(1) {
-  font-size: 23vw;
+.sixth .outer .inner .bg h2 .st-wrapper div div {
+  font-size: 40vw;
   margin-right: 0;
 }/*# sourceMappingURL=main.css.map */
