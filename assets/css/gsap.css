@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: hsl(0, 0%, 80%);
+  background: black;
+  font-family: "Cormorant Garamond", serif;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+}
+section h2 {
+  font-size: 10vw;
+}/*# sourceMappingURL=gsap.css.map */

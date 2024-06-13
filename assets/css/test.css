@@ -1,0 +1,29 @@
+[class^=multi-] {
+  background-color: #f8b400;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+* {
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+h2 {
+  margin-bottom: 100px;
+}
+
+div {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.multi {
+  background-color: aqua;
+}/*# sourceMappingURL=test.css.map */

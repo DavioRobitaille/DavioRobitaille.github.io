@@ -21,23 +21,25 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   color: hsl(0, 0, 80%);
   background: black;
   font-family: "Cormorant Garamond", serif;
 }
 
 .typewriter {
-    display: inline-block;
-    border-right: 0.1px solid white;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: blink-cursor 1s infinite;
-  }
+  display: inline-block;
+  border-right: 0.1px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-cursor 1s infinite;
+}
   
-  @keyframes blink-cursor {
-    from, to { border-color: rgba(255, 255, 255, 0.1); }
-    50% { border-color: rgba(255, 255, 255, 0.6); }
-  }
+@keyframes blink-cursor {
+  from, to { border-color: rgba(255, 255, 255, 0.1); }
+  50% { border-color: rgba(255, 255, 255, 0.6); }
+}
 
 h2 {
   font-size: 5vw;
@@ -104,6 +106,7 @@ section {
 }
 
 .bg-1 {
+    
     background-image: $bg-gradient, url(https://images.unsplash.com/photo-1710438399463-e7b374c2db9e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     h2 {
         .st-wrapper {
@@ -178,22 +181,6 @@ h2 * {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
 
-            .bg-1 {
-                z-index: 5;
-            }
-            .bg-2 {
-                z-index: 4;
-            }
-            .bg-3 {
-                z-index: 3;
-            }
-            .bg-4 {
-                z-index: 2;
-            }
-            .bg-5 {
-                z-index: 3;
-            }
-
             .bg {
                 width: 20vw;
                 position: relative;
@@ -208,6 +195,23 @@ h2 * {
                         }
                     }
                 }
+            }
+
+            .bg-1 {
+                z-index: 5;
+            }
+            .bg-2 {
+                z-index: 4;
+            }
+            .bg-3 {
+                z-index: 3;
+                background-image: $bg-gradient, url(/assets/images/bg3-flip.webp);
+            }
+            .bg-4 {
+                z-index: 2;
+            }
+            .bg-5 {
+                z-index: 1;
             }
         }
     }

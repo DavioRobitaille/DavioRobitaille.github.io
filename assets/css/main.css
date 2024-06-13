@@ -16,6 +16,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   color: hsl(0, 0%, 80%);
   background: black;
   font-family: "Cormorant Garamond", serif;
@@ -135,6 +137,14 @@ h2 * {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
+.sixth .outer .inner .bg {
+  width: 20vw;
+  position: relative;
+}
+.sixth .outer .inner .bg h2 .st-wrapper div div {
+  font-size: 40vw;
+  margin-right: 0;
+}
 .sixth .outer .inner .bg-1 {
   z-index: 5;
 }
@@ -143,18 +153,11 @@ h2 * {
 }
 .sixth .outer .inner .bg-3 {
   z-index: 3;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(/assets/images/bg3-flip.webp);
 }
 .sixth .outer .inner .bg-4 {
   z-index: 2;
 }
 .sixth .outer .inner .bg-5 {
-  z-index: 3;
-}
-.sixth .outer .inner .bg {
-  width: 20vw;
-  position: relative;
-}
-.sixth .outer .inner .bg h2 .st-wrapper div div {
-  font-size: 40vw;
-  margin-right: 0;
+  z-index: 1;
 }/*# sourceMappingURL=main.css.map */

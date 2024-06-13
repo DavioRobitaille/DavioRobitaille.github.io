@@ -265,7 +265,38 @@ function gotoSection(index, direction) {
           each: 0.1,
           from: "random"
         }
+      }, 0.2)
+    .fromTo(innerWrappers[index].children, {
+        autoAlpha: 0,
+        yPercent: 50
+      }, {
+        autoAlpha: 1,
+        yPercent: 0,
+        duration: 1,
+        ease: "power4",
+        stagger: {
+          each: 0.1,
+          from: "random"
+        }
       }, 0.2);
+
+  // Check if the current section is the last one and animate the section-heading
+  if (index === sections.length - 1) {
+    let lastSectionHeadings = document.querySelectorAll(".sixth > .outer > .inner > .bg > .section-heading");
+    gsap.fromTo(lastSectionHeadings, {
+      xPercent: -100,
+      autoAlpha: 0
+    }, {
+      xPercent: 0,
+      autoAlpha: 1,
+      duration: 5,
+      ease: "power4",
+      stagger: {
+        each: 0.1,
+        from: "random"
+      }
+    });
+  }
 
   currentIndex = index;
 }
