@@ -289,7 +289,7 @@ function gotoSection(index, direction) {
     }, {
       xPercent: 0,
       autoAlpha: 1,
-      duration: 5,
+      duration: 10,
       ease: "power4",
       stagger: {
         each: 0.1,
