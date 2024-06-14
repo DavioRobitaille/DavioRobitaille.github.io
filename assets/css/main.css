@@ -69,34 +69,34 @@ body {
   0% {
     font-variation-settings: "wght" 300;
     font-size: 5vw;
-    filter: blur(1px);
+    filter: blur(0px);
   }
   60% {
     font-variation-settings: "wght" 700;
-    font-size: 6vw;
-    filter: blur(5px);
+    font-size: 4vw;
+    filter: blur(2px);
   }
   100% {
     font-variation-settings: "wght" 300;
     font-size: 5vw;
-    filter: blur(1px);
+    filter: blur(0px);
   }
 }
 @keyframes breatheB {
   0% {
     font-variation-settings: "wght" 300;
-    font-size: 40vw;
-    filter: blur(1px);
+    font-size: 44vw;
+    filter: blur(0px);
   }
   60% {
     font-variation-settings: "wght" 700;
-    font-size: 44vw;
-    filter: blur(5px);
+    font-size: 40vw;
+    filter: blur(2px);
   }
   100% {
     font-variation-settings: "wght" 300;
-    font-size: 40vw;
-    filter: blur(1px);
+    font-size: 44vw;
+    filter: blur(0px);
   }
 }
 .typewriter {
@@ -227,9 +227,12 @@ h2 * {
 .sixth .outer .inner .bg-2, .sixth .outer .inner .bg-7 {
   z-index: 4;
 }
-.sixth .outer .inner .bg-3, .sixth .outer .inner .bg-8 {
+.sixth .outer .inner .bg-3 {
   z-index: 3;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(/assets/images/bg3-flip.webp);
+}
+.sixth .outer .inner .bg-8 {
+  z-index: 3;
 }
 .sixth .outer .inner .bg-4, .sixth .outer .inner .bg-9 {
   z-index: 2;
