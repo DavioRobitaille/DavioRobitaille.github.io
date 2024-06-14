@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
 
 $bg-gradient: linear-gradient(
   180deg,
@@ -26,6 +27,66 @@ body {
   color: hsl(0, 0, 80%);
   background: black;
   font-family: "Cormorant Garamond", serif;
+}
+
+.font2 {
+    font-family: "Cormorant Garamond", serif;
+    font-variation-settings: 'wght' 300;
+    mix-blend-mode: difference;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    filter: blur(1px);
+
+    .st-char:first-of-type {
+        animation: breatheB 8000ms infinite both;
+    }
+
+    .st-char:not(:first-of-type) {
+        animation: breathe 8000ms infinite both;
+        & {
+            @for $i from 2 through 10 { // Adjust 10 to the number of elements you have
+                &:nth-of-type(#{$i}) {
+                    animation-delay: #{$i * 400ms};
+                }
+            }
+        }
+    }
+}
+
+@keyframes breathe {
+    0% {
+      font-variation-settings: 'wght' 300;
+      font-size: 5vw;
+      filter: blur(1px);
+    }
+    60% {
+      font-variation-settings: 'wght' 700;
+      font-size: 6vw;
+      filter: blur(5px);
+    }
+    
+    100% {
+      font-variation-settings: 'wght' 300;
+      font-size: 5vw;
+      filter: blur(1px);
+    }
+}
+@keyframes breatheB {
+    0% {
+      font-variation-settings: 'wght' 300;
+      font-size: 40vw;
+      filter: blur(1px);
+    }
+    60% {
+      font-variation-settings: 'wght' 700;
+      font-size: 44vw;
+      filter: blur(5px);
+    }
+    
+    100% {
+      font-variation-settings: 'wght' 300;
+      font-size: 40vw;
+      filter: blur(1px);
+    }
 }
 
 .typewriter {
@@ -106,7 +167,6 @@ section {
 }
 
 .bg-1 {
-    
     background-image: $bg-gradient, url(https://images.unsplash.com/photo-1710438399463-e7b374c2db9e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     h2 {
         .st-wrapper {
@@ -197,21 +257,86 @@ h2 * {
                 }
             }
 
-            .bg-1 {
+            .bg-1, .bg-6 {
                 z-index: 5;
             }
-            .bg-2 {
+            .bg-2, .bg-7 {
                 z-index: 4;
             }
-            .bg-3 {
+            .bg-3, .bg-8 {
                 z-index: 3;
                 background-image: $bg-gradient, url(/assets/images/bg3-flip.webp);
             }
-            .bg-4 {
+            .bg-4, .bg-9 {
                 z-index: 2;
             }
-            .bg-5 {
+            .bg-5, .bg-10 {
                 z-index: 1;
+            }
+        }
+    }
+}
+
+.bg-6 {
+    background-image: url(https://images.unsplash.com/photo-1663517768994-a65e6ab3a40a?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    h2 {
+        .st-wrapper {
+            div {
+                div:nth-child(1) {
+                    margin-right: -8vw;
+                }
+            }
+        }
+    }
+}
+
+.bg-7 {
+    background-image: url(https://images.unsplash.com/photo-1592892741417-be33b3975d28?q=80&w=2818&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    h2 {
+        .st-wrapper {
+            div {
+                div:nth-child(1) {
+                    margin-right: 1vw;
+                }
+            }
+        }
+    }
+}
+
+.bg-8 {
+    background-image: url(https://images.unsplash.com/photo-1622542795979-1a7b6e74b46a?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    h2 {
+        .st-wrapper {
+            div {
+                div:nth-child(1) {
+                    margin-right: -10vw;
+                }
+            }
+        }
+    }
+}
+
+.bg-9 {
+    background-image: url(https://images.unsplash.com/photo-1568733873715-f9d497a47ea0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    h2 {
+        .st-wrapper {
+            div {
+                div:nth-child(1) {
+                    margin-right: -1vw;
+                }
+            }
+        }
+    }
+}
+
+.bg-10 {
+    background-image: url(https://images.unsplash.com/photo-1530840197133-665af68f9d71?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    h2 {
+        .st-wrapper {
+            div {
+                div:nth-child(1) {
+                    margin-right: -6vw;
+                }
             }
         }
     }

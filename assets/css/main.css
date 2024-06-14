@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap");
 * {
   box-sizing: border-box;
   -webkit-user-select: none;
@@ -23,6 +24,81 @@ body {
   font-family: "Cormorant Garamond", serif;
 }
 
+.font2 {
+  font-family: "Cormorant Garamond", serif;
+  font-variation-settings: "wght" 300;
+  mix-blend-mode: difference;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  filter: blur(1px);
+}
+.font2 .st-char:first-of-type {
+  animation: breatheB 8000ms infinite both;
+}
+.font2 .st-char:not(:first-of-type) {
+  animation: breathe 8000ms infinite both;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(2) {
+  animation-delay: 800ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(3) {
+  animation-delay: 1200ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(4) {
+  animation-delay: 1600ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(5) {
+  animation-delay: 2000ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(6) {
+  animation-delay: 2400ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(7) {
+  animation-delay: 2800ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(8) {
+  animation-delay: 3200ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(9) {
+  animation-delay: 3600ms;
+}
+.font2 .st-char:not(:first-of-type):nth-of-type(10) {
+  animation-delay: 4000ms;
+}
+
+@keyframes breathe {
+  0% {
+    font-variation-settings: "wght" 300;
+    font-size: 5vw;
+    filter: blur(1px);
+  }
+  60% {
+    font-variation-settings: "wght" 700;
+    font-size: 6vw;
+    filter: blur(5px);
+  }
+  100% {
+    font-variation-settings: "wght" 300;
+    font-size: 5vw;
+    filter: blur(1px);
+  }
+}
+@keyframes breatheB {
+  0% {
+    font-variation-settings: "wght" 300;
+    font-size: 40vw;
+    filter: blur(1px);
+  }
+  60% {
+    font-variation-settings: "wght" 700;
+    font-size: 44vw;
+    filter: blur(5px);
+  }
+  100% {
+    font-variation-settings: "wght" 300;
+    font-size: 40vw;
+    filter: blur(1px);
+  }
+}
 .typewriter {
   display: inline-block;
   border-right: 0.1px solid white;
@@ -145,19 +221,54 @@ h2 * {
   font-size: 40vw;
   margin-right: 0;
 }
-.sixth .outer .inner .bg-1 {
+.sixth .outer .inner .bg-1, .sixth .outer .inner .bg-6 {
   z-index: 5;
 }
-.sixth .outer .inner .bg-2 {
+.sixth .outer .inner .bg-2, .sixth .outer .inner .bg-7 {
   z-index: 4;
 }
-.sixth .outer .inner .bg-3 {
+.sixth .outer .inner .bg-3, .sixth .outer .inner .bg-8 {
   z-index: 3;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url(/assets/images/bg3-flip.webp);
 }
-.sixth .outer .inner .bg-4 {
+.sixth .outer .inner .bg-4, .sixth .outer .inner .bg-9 {
   z-index: 2;
 }
-.sixth .outer .inner .bg-5 {
+.sixth .outer .inner .bg-5, .sixth .outer .inner .bg-10 {
   z-index: 1;
+}
+
+.bg-6 {
+  background-image: url(https://images.unsplash.com/photo-1663517768994-a65e6ab3a40a?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.bg-6 h2 .st-wrapper div div:nth-child(1) {
+  margin-right: -8vw;
+}
+
+.bg-7 {
+  background-image: url(https://images.unsplash.com/photo-1592892741417-be33b3975d28?q=80&w=2818&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.bg-7 h2 .st-wrapper div div:nth-child(1) {
+  margin-right: 1vw;
+}
+
+.bg-8 {
+  background-image: url(https://images.unsplash.com/photo-1622542795979-1a7b6e74b46a?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.bg-8 h2 .st-wrapper div div:nth-child(1) {
+  margin-right: -10vw;
+}
+
+.bg-9 {
+  background-image: url(https://images.unsplash.com/photo-1568733873715-f9d497a47ea0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.bg-9 h2 .st-wrapper div div:nth-child(1) {
+  margin-right: -1vw;
+}
+
+.bg-10 {
+  background-image: url(https://images.unsplash.com/photo-1530840197133-665af68f9d71?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.bg-10 h2 .st-wrapper div div:nth-child(1) {
+  margin-right: -6vw;
 }/*# sourceMappingURL=main.css.map */
