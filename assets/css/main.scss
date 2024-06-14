@@ -60,8 +60,8 @@ body {
     }
     60% {
       font-variation-settings: 'wght' 700;
-      font-size: 4vw;
-      filter: blur(2px);
+      font-size: 4.75vw;
+      filter: blur(1px);
     }
     
     100% {
@@ -73,18 +73,18 @@ body {
 @keyframes breatheB {
     0% {
       font-variation-settings: 'wght' 300;
-      font-size: 44vw;
+      font-size: 51vw;
       filter: blur(0px);
     }
     60% {
       font-variation-settings: 'wght' 700;
-      font-size: 40vw;
-      filter: blur(2px);
+      font-size: 50vw;
+      filter: blur(1px);
     }
     
     100% {
       font-variation-settings: 'wght' 300;
-      font-size: 44vw;
+      font-size: 51vw;
       filter: blur(0px);
     }
 }
@@ -313,7 +313,7 @@ h2 * {
         .st-wrapper {
             div {
                 div:nth-child(1) {
-                    margin-right: -10vw;
+                    margin-right: -14vw;
                 }
             }
         }

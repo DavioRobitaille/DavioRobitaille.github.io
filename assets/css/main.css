@@ -73,8 +73,8 @@ body {
   }
   60% {
     font-variation-settings: "wght" 700;
-    font-size: 4vw;
-    filter: blur(2px);
+    font-size: 4.75vw;
+    filter: blur(1px);
   }
   100% {
     font-variation-settings: "wght" 300;
@@ -85,17 +85,17 @@ body {
 @keyframes breatheB {
   0% {
     font-variation-settings: "wght" 300;
-    font-size: 44vw;
+    font-size: 51vw;
     filter: blur(0px);
   }
   60% {
     font-variation-settings: "wght" 700;
-    font-size: 40vw;
-    filter: blur(2px);
+    font-size: 50vw;
+    filter: blur(1px);
   }
   100% {
     font-variation-settings: "wght" 300;
-    font-size: 44vw;
+    font-size: 51vw;
     filter: blur(0px);
   }
 }
@@ -260,7 +260,7 @@ h2 * {
   background-image: url(https://images.unsplash.com/photo-1622542795979-1a7b6e74b46a?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 .bg-8 h2 .st-wrapper div div:nth-child(1) {
-  margin-right: -10vw;
+  margin-right: -14vw;
 }
 
 .bg-9 {
