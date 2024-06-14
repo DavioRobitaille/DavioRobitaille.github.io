@@ -239,6 +239,7 @@ h2 * {
 }
 .sixth .outer .inner .bg-5, .sixth .outer .inner .bg-10 {
   z-index: 1;
+  overflow: hidden;
 }
 
 .bg-6 {

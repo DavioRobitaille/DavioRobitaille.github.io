@@ -275,6 +275,7 @@ h2 * {
             }
             .bg-5, .bg-10 {
                 z-index: 1;
+                overflow: hidden;
             }
         }
     }
